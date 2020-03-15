@@ -13,9 +13,9 @@ def covidTable( ):
     table = []
     for tr_element in tr_elements[0:]:
         row = []
-        for i in idx:
+        for t in tr_element:
             if isinstance(t, lh.HtmlElement):
-                row.append( tr_element[i].text_content().strip() )
-        table.append(row)
+                row.append( t.text_content().strip() )
+        table.append( row )
     df = pd.DataFrame( table[1:], columns = table[0] ).set_index('Country,Other')
     return df
