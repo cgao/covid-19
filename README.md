@@ -4,7 +4,7 @@ pull coronavirus cases count from worldometers.info/coronavirus
 
 To Run:
 
-from covid.py import covidTable
+from covid import covidTable
 
 df = covidTable()
 
